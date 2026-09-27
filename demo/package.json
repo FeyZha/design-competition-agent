@@ -1,0 +1,15 @@
+{
+  "name": "design-competition-agent-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "node --experimental-strip-types test.mjs"
+  },
+  "devDependencies": {
+    "vite": "8.0.13",
+    "typescript": "5.9.3"
+  }
+}

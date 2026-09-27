@@ -1,0 +1,6 @@
+{
+  "framework": null,
+  "installCommand": "npm --prefix demo ci",
+  "buildCommand": "npm --prefix demo run build",
+  "outputDirectory": "demo/dist"
+}

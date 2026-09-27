@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {competitionDirections,competitionCreationTasks,competitionFeeStatus} from './src/competition-results.ts';
+const feed=JSON.parse(readFileSync(new URL('./public/feed.json',import.meta.url),'utf8'));
+const rows=competitionDirections(feed);
+assert.equal(feed.items.length,106);
+assert.ok(rows.length>106);
+const bound=rows.find(r=>r.bindingEvidence?.quote);
+assert.ok(bound);assert.ok(competitionCreationTasks(bound).every(t=>t.submissionFormat));
+assert.equal(competitionFeeStatus({fee:'免费参赛，可选证书收费100元'}),'free');
+assert.ok(rows.some(r=>r.designTypes?.includes('海报')));
+console.log(rows.length+' directions; bound deliverables and fee boundary OK');

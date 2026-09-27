@@ -1,5 +1,7 @@
 # 设计竞赛检索与规则解析 Agent
 
+[在线体验](https://feyzha-design-scout.vercel.app) · [GitHub](https://github.com/FeyZha/design-competition-agent)
+
 发现设计竞赛，将分散的网页及附件规则整理成可追溯的投稿方向与创作任务书。
 
 ## 功能
